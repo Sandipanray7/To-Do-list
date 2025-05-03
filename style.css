@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#taskInput{
+    margin-top: 40px;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#taskList {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 400px; /* Set a max width for the task list */
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    width: 100%; /* 50px less than container */
+    transition: background-color 0.2s ease;
+    box-sizing: border-box;
+    text-align: left; /* ensures left alignment for text */
+}
+
+
+.delete-btn {
+    margin-left: 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+
+li:hover {
+    background-color: #f0f0f0;
+}
+#addTaskBtn{
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+}
+#message {
+    position: absolute;
+    top: 20px;
+    color: green;
+    font-weight: bold;
+    display: none;
+}
+.container {
+    border-radius: 7px;
+    position: relative; /* This makes #message position relative to the container */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid grey;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    overflow-y: auto;
+}
+.in {
+    flex-shrink: 0; /* Prevent shrinking */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.list {
+    flex-grow: 1; /* Take up remaining space */
+    overflow-y: auto; /* Only this scrolls */
+    width: 100%;
+    margin-top: 10px;
+}
+#taskList li:hover .delete-btn {
+    display: inline-block;
+}
