@@ -70,6 +70,13 @@ li:hover {
     font-weight: bold;
     display: none;
 }
+#message1 {
+    position: absolute;
+    top: 20px;
+    color: red;
+    font-weight: bold;
+    display: none;
+}
 .container {
     border-radius: 7px;
     position: relative; /* This makes #message position relative to the container */

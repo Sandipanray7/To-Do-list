@@ -12,6 +12,13 @@ document.getElementById("addTaskBtn").addEventListener("click", function () {
     deleteBtn.className = "delete-btn";
     deleteBtn.onclick = function () {
       li.remove();
+      // Show success message for deletion
+      const messageDiv1 = document.getElementById("message1");
+      messageDiv1.textContent = "Task deleted successfully!";
+      messageDiv1.style.display = "block";
+      setTimeout(() => {
+        messageDiv1.style.display = "none";
+      }, 2000);
     };
   
     li.appendChild(deleteBtn);
